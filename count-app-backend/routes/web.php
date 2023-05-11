@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Products Routes
+Route::get('/products/', [ProductController::class, 'index']);
+Route::get('/products/create/', [ProductController::class, 'create']);
+Route::get('/products/{id}/', [ProductController::class, 'view']);
+Route::get('/products/update/{id}', [ProductController::class, 'update']);
+Route::get('/products/delete/{id}', [ProductController::class, 'delete']);

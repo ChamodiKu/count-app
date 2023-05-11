@@ -13,7 +13,7 @@ use Carbon\Carbon;
  *
  * @property int $id
  * @property int $product_id
- * @property int $count_id
+ * @property int $section_id
  * @property float $tcount
  * @property Carbon $updated_at
  *
@@ -38,12 +38,24 @@ class Count extends Model
     ];
 
     protected $fillable = [
-        'name',
+        'product_id',
+        'section_id',
+        'tcount',
         'updated_at'
     ];
 
-    public function counts()
+    public function product()
     {
-        return $this->hasMany(counts::class, 'count_id');
+        return $this->belongsTo(Product::class, 'product_id');
+    }
+
+    public function section()
+    {
+        return $this->belongsTo(Section::class, 'section_id');
+    }
+
+    public function count()
+    {
+        return $this->hasMany(Product::class, 'count_id');
     }
 }

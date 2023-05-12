@@ -36,11 +36,11 @@ Route::get('/', function () {
 //Route::get('/sections/delete/{id}', [SectionController::class, 'delete']);
 
 
-//Counts Routes
-Route::get('/counts/', [CountController::class, 'index']);
-Route::get('/counts/create/', [CountController::class, 'create']);
-Route::get('/counts/{id}/', [CountController::class, 'view']);
-Route::get('/counts/update/{id}', [CountController::class, 'update']);
-Route::get('/counts/delete/{id}', [CountController::class, 'delete']);
-Route::get('/counts/viewbyproduct/{id}', [CountController::class, 'viewByProduct']);
-Route::get('/counts/viewbysection/{id}', [CountController::class, 'viewBySection']);
+////Counts Routes
+//Route::get('/counts/', [CountController::class, 'index']);
+//Route::get('/counts/create/', [CountController::class, 'create']);
+//Route::get('/counts/{id}/', [CountController::class, 'view']);
+//Route::get('/counts/update/{id}', [CountController::class, 'update']);
+//Route::get('/counts/delete/{id}', [CountController::class, 'delete']);
+//Route::get('/counts/viewbyproduct/{id}', [CountController::class, 'viewByProduct']);
+//Route::get('/counts/viewbysection/{id}', [CountController::class, 'viewBySection']);

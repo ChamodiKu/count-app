@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CountController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SectionController;
 use Illuminate\Http\Request;
@@ -34,3 +35,12 @@ Route::post('/sections/create/', [SectionController::class, 'create']);
 Route::get('/sections/{id}/', [SectionController::class, 'view']);
 Route::patch('/sections/update/{id}', [SectionController::class, 'update']);
 Route::delete('/sections/delete/{id}', [SectionController::class, 'delete']);
+
+//Counts Routes
+Route::get('/counts/', [CountController::class, 'index']);
+Route::post('/counts/create/', [CountController::class, 'create']);
+Route::get('/counts/{id}/', [CountController::class, 'view']);
+Route::patch('/counts/update/{id}', [CountController::class, 'update']);
+Route::delete('/counts/delete/{id}', [CountController::class, 'delete']);
+Route::get('/counts/viewbyproduct/{id}', [CountController::class, 'viewByProduct']);
+Route::get('/counts/viewbysection/{id}', [CountController::class, 'viewBySection']);

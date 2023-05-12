@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios'
 import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 export default function TotalCount() {
     const navigate = useNavigate();
@@ -83,6 +83,17 @@ export default function TotalCount() {
                                 </Form>
                             </div>
                         </div>
+                    </div>
+                    <div className="col-12">
+                        <Link to={`/products`} className='btn btn-success me-2'>
+                            Products
+                        </Link>
+                        <Link to={`/sections`} className='btn btn-success me-2'>
+                            Sections
+                        </Link>
+                        <Link to={`/counts/`} className='btn btn-success me-2'>
+                            Counts
+                        </Link>
                     </div>
                 </div>
             </div>

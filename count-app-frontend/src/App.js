@@ -14,6 +14,10 @@ import UpdateProduct from "./components/product/edit.component";
 import ViewAllProducts from "./components/product/viewall.component";
 import DeleteProduct from "./components/product/delete.component";
 
+import CreateSection from "./components/section/create.component";
+import UpdateSection from "./components/section/edit.component";
+import ViewAllSections from "./components/section/viewall.component";
+
 // function App() {
 //   return (
 //     <div className="App">
@@ -37,6 +41,10 @@ import DeleteProduct from "./components/product/delete.component";
 //
 // export default App;
 
+function DeleteSection() {
+  return null;
+}
+
 function App() {
   return (<Router>
     <Navbar bg="primary">
@@ -51,10 +59,17 @@ function App() {
       <Row>
         <Col md={12}>
           <Routes>
+            {/*products routes*/}
             <Route path="/products/create" element={<CreateProduct />} />
             <Route path="/products/update/:id" element={<UpdateProduct />} />
             <Route exact path='/products/' element={<ViewAllProducts />} />
             <Route path="/products/delete/:id" element={<DeleteProduct />}/>
+
+            {/*section routes*/}
+            <Route path="/sections/create" element={<CreateSection />} />
+            <Route path="/sections/update/:id" element={<UpdateSection />} />
+            <Route exact path='/sections/' element={<ViewAllSections />} />
+            {/*<Route path="/sections/delete/:id" element={<DeleteSection />}/>*/}
           </Routes>
         </Col>
       </Row>

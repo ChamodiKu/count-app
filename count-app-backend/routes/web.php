@@ -28,12 +28,12 @@ Route::get('/', function () {
 //Route::get('/products/delete/{id}', [ProductController::class, 'delete']);
 
 
-//Sections Routes
-Route::get('/sections/', [SectionController::class, 'index']);
-Route::get('/sections/create/', [SectionController::class, 'create']);
-Route::get('/sections/{id}/', [SectionController::class, 'view']);
-Route::get('/sections/update/{id}', [SectionController::class, 'update']);
-Route::get('/sections/delete/{id}', [SectionController::class, 'delete']);
+////Sections Routes
+//Route::get('/sections/', [SectionController::class, 'index']);
+//Route::get('/sections/create/', [SectionController::class, 'create']);
+//Route::get('/sections/{id}/', [SectionController::class, 'view']);
+//Route::get('/sections/update/{id}', [SectionController::class, 'update']);
+//Route::get('/sections/delete/{id}', [SectionController::class, 'delete']);
 
 
 //Counts Routes

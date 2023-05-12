@@ -20,6 +20,7 @@ import ViewAllSections from "./components/section/viewall.component";
 import CreateCount from "./components/count/create.component";
 import UpdateCount from "./components/count/edit.component";
 import ViewAllCounts from "./components/count/viewall.component";
+import TotalCount from "./components/home.component";
 
 // function App() {
 //   return (
@@ -78,6 +79,7 @@ function App() {
             <Route path="/counts/create" element={<CreateCount />} />
             <Route path="/counts/update/:id" element={<UpdateCount />} />
             <Route exact path='/counts/' element={<ViewAllCounts />} />
+            <Route path="/" element={<TotalCount />} />
             {/*<Route path="/counts/delete/:id" element={<DeleteCount />}/>*/}
 
           </Routes>

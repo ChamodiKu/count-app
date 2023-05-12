@@ -12,6 +12,7 @@ import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import CreateProduct from "./components/product/create.component";
 import UpdateProduct from "./components/product/edit.component";
 import ViewAllProducts from "./components/product/viewall.component";
+import DeleteProduct from "./components/product/delete.component";
 
 // function App() {
 //   return (
@@ -40,7 +41,7 @@ function App() {
   return (<Router>
     <Navbar bg="primary">
       <Container>
-        <Link to={"/"} className="navbar-brand text-white">
+        <Link to={"/products"} className="navbar-brand text-white">
           Count App
         </Link>
       </Container>
@@ -53,6 +54,7 @@ function App() {
             <Route path="/products/create" element={<CreateProduct />} />
             <Route path="/products/update/:id" element={<UpdateProduct />} />
             <Route exact path='/products/' element={<ViewAllProducts />} />
+            <Route path="/products/delete/:id" element={<DeleteProduct />}/>
           </Routes>
         </Col>
       </Row>

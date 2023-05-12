@@ -10,6 +10,7 @@ import Col from "react-bootstrap/Col";
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 
 import CreateProduct from "./components/product/create.component";
+import UpdateProduct from "./components/product/edit.component";
 
 function App() {
   return (<Router>
@@ -26,6 +27,7 @@ function App() {
         <Col md={12}>
           <Routes>
             <Route path="/products/create" element={<CreateProduct />} />
+            <Route path="/products/update/:id" element={<UpdateProduct />} />
           </Routes>
         </Col>
       </Row>
